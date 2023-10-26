@@ -1,0 +1,116 @@
+body {
+    font-family: sans-serif;
+    background-color: #000000;
+  }
+  
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+    color: #fff;
+    text-align: left;
+  }
+
+ /*-------------------------DESENVOLVEDOR----------------------------------------*/ 
+  .desenvolvedor p{
+    color: #f0eaea;
+  }
+
+  .desenvolvedor h1 {
+    color: #f0eaea;
+  }
+  
+  .desenvolvedor h2{
+    text-align: center;
+    color: rgb(167, 40, 40);
+  }
+
+  .desenvolvedor h3{
+    
+    color: #f0eaea;
+  }
+
+
+  .desenvolvedor li {
+    display: inline-block;
+    float: left;
+    margin: 40px;
+  }
+  .desenvolvedor {
+    text-align: center;
+  }
+
+/*------------------------------------------------------------------------*/
+
+
+/*-------------------------FILMES-----------------------------------------*/
+  .filmes button{
+    color: rgb(14, 19, 19);
+    font-size: 14px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(240, 24, 24);
+    border: 2px solid #b43636;
+    transition-duration: 0.4s;
+    margin:12px
+  }
+  .filmes h2{
+    text-align: center;
+    color: rgb(167, 40, 40);
+  }
+
+  .filmes h3{
+    
+    color: #f0eaea;
+  }  
+  .filmes button:hover {
+    background-color: #b6c0b9; /* Green */
+    color: rgb(0, 0, 0);
+  }
+
+  .filmes input{
+    color: rgb(14, 19, 19);
+    font-size: 14px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(240, 24, 24);
+    border: 2px solid #b43636;
+    transition-duration: 0.4s;
+    margin:12px
+  }
+
+  .filmes input:hover{
+    background-color: #b6c0b9; /* Green */
+    color: rgb(0, 0, 0);
+  }
+
+  .filmes li {
+    display: inline-block;
+    float: left;
+    margin: 40px;
+  }
+  
+  .filmes {
+    text-align: center;
+  }
+
+/*------------------------------------------------------------------*/ 
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+  }
+
+
+
+
+
+
+
+  
