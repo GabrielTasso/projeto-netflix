@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Filmes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/logonet.jpg" alt="Logo da Netflix"></a>
+  </header>
+  <main>
+    <section class="filmes">
+      <h2>Filmes</h2>
+      <input type="file" id="imagem">
+      <button  onclick="adicionarFilme()">Adicionar filme</button>
+      <button class="remover" onclick="removerUltimoFilme()">Remover último filme</button>
+      <ul id="filmes"> 
+
+        <li>
+          <img src="img/filme1.jpg" alt="O Poderoso Chefão">
+          <h3>O Poderoso Chefão</h3>
+
+        </li>
+
+        <li>
+          <img src="img/filme2.jpg" alt="Bastardos inglorios">
+          <h3>Bastardos inglorios</h3>
+
+
+        <li>
+          <img src="img/filme3.jpg" alt="Django">
+            <h3>Django</h3>         
+          
+        </li>
+        <li>
+            <img src="img/filme4.jpg" alt="Pulp Fiction">
+            <h3>Pulp Fiction</h3>
+ 
+        </li>
+        <li>
+            <img src="img/filme5.jpg" alt="Os Oitos Odiados">
+            <h3>Os Oitos Odiados</h3>
+
+        </li>
+       
+      </ul>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Netflix © 2023 </p>
+  </footer>
+</body>
+<script src="filme.js"></script>
+</html>
