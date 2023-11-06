@@ -2,55 +2,211 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Netflix Filmes</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to 7ª Art</title>
+
+  <style>
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 100px;
+      max-width: 100px;
+    }
+    
+    .aranhaverso {
+      width: 25%;
+    }
+    
+    .percy {
+      width: 25%;
+    }
+    
+    
+    body {
+      font-family: sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 2.5px;
+    } 
+    
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+    }
+    
+    nav a:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    section {
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+    
+    footer {
+      background-color: #daa520;
+      color: #000000;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #daa520;
+    }
+    
+    /* Flip card */
+
+    .flip-card-container {
+    max-width: 300px; /* Define a largura máxima do container */
+    height: 400px; /* Defina uma altura fixa */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Adicione esta linha */
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+    perspective: 1000px;
+    position: relative;
+  }
+
+  .flip-card-inner {
+    position: relative; /* Altere para 'relative' */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute; /* Adicione esta linha */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  </style>
+
 </head>
+
 <body>
+
   <header>
-    <a href="index.html"><img src="./assets/img/logonet.jpg" alt="Logo da Netflix"></a>
+    <div class="logo">
+      <a href="index.html"><img src="logowhite.png" alt="Logotipo do site"></a>
+    </div>
+
   </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="#">Documentários</a>
+    <a href="#">Desenvolvedores</a>
+  </nav>
+
   <main>
-    <section class="filmes">
-      <h2>Filmes</h2>
-      <input type="file" id="imagem">
-      <button  onclick="adicionarFilme()">Adicionar filme</button>
-      <button class="remover" onclick="removerUltimoFilme()">Remover último filme</button>
-      <ul id="filmes"> 
-
+    <section class="home">
+      <h1>Últimos Lançamentos</h1>
+      <ul>
         <li>
-          <img src="./assets/img/filme1.jpg" alt="O Poderoso Chefão">
-          <h3>O Poderoso Chefão</h3>
 
+          <h2>Homem-Aranha: Através do Aranhaverso</h2>
+
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="aranhaverso.png" alt="Imagem da frente">
+                </div>
+                <div class="flip-card-back">
+                  <img src="spidermannowayhome.png" alt="Imagem do verso">
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
-
+        <p>Um adolescente de Brooklyn, Miles Morales, descobre que <br> ele é um de muitos Homens-Aranha em um multiverso conhecido <br> como "Aranhaverso", e deve se unir a outros heróis aracnídeos para salvar <br> sua realidade da destruição.</p>
+        <p><a href="https://www.youtube.com/watch?v=LZBlXkDvhh4" target="_blank">ACESSE O TRAILER OFICIAL DUBLADO AGORA MESMO!</a></p>
         <li>
-          <img src="./assets/img/filme2.jpg" alt="Bastardos inglorios">
-          <h3>Bastardos inglorios</h3>
+          <h3>Percy Jackson e os Olimpianos</h3>
+          <!-- <div class="percy"> <img src="percy.png" alt="Série"></div> -->
 
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="percy.png" alt="Imagem da frente">
+                </div>
+                <div class="flip-card-back">
+                  <img src="lancereddick.png" alt="Imagem do verso">
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <li>
-          <img src="./assets/img/filme3.jpg" alt="Django">
-            <h3>Django</h3>         
-          
-        </li>
-        <li>
-            <img src="./assets/img/filme4.jpg" alt="Pulp Fiction">
-            <h3>Pulp Fiction</h3>
- 
-        </li>
-        <li>
-            <img src="./assets/img/filme5.jpg" alt="Os Oitos Odiados">
-            <h3>Os Oitos Odiados</h3>
-
-        </li>
-       
+          <p>Percy Jackson é um adolescente aparentemente normal <br> que descobre ser um semideus, filho de Poseidon. Ele é enviado <br> para o Acampamento Meio-Sangue, um refúgio para semideuses, <br> onde deve aprender a aprimorar suas habilidades e enfrentar uma <br> série de missões para prevenir o caos no Olimpo.</p>
+          <p><a href="https://www.youtube.com/watch?v=uvk45iybIl4" target="_blank">ACESSE O TRAILER OFICIAL DUBLADO AGORA MESMO!</a></p>
       </ul>
     </section>
   </main>
-  
+
   <footer>
-    <p>Netflix © 2023 </p>
+    <p>7ª Art Copyright © 2023</p>
   </footer>
+
 </body>
-<script src="./assets/js/filme.js"></script>
 </html>
