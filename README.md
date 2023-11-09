@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/GabrielTasso/projeto-netflix/assets/69552520/fd0f8910-f4f5-417b-b49b-0bee7abdc881" width="600px">
+  <img src="https://github.com/GabrielTasso/projeto-netflix/assets/69552520/13875b2d-318c-4d81-8e4e-72ccc32be8ca" width="600px">
   <h1>Projeto Netflix</h1>
 </div>
 
