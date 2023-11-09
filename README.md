@@ -12,8 +12,7 @@
 
 <h2>✔ Projeto Desenvolvido por</h2>
 <ul>
-  <li>Ana</li>
-  <li>Fernanda</li>
+  <li>Fernanda Novello</li>
   <li>Gabriel Tasso</li>
   <li>Luan Calasans</li>
 </ul>
