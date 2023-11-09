@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Filmes</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+    <a href="index.html"><img src="./assets/img/logowhite.png" alt="Logo da Netflix"></a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./filmes.html">Filmes</a>
+    <a href="./series.html">Séries</a>
+    <a href="#">Documentários</a>
+    <a href="./criadores.html">Desenvolvedores</a>
+  </nav>
+
+  <main>
+    <section class="filmes">
+      <h1>Filmes</h1>
+      <input type="file" id="imagem">
+      <button  onclick="adicionarFilme()">Adicionar filme</button>
+      <button class="remover" onclick="removerUltimoFilme()">Remover último filme</button>
+      <ul id="filmes"> 
+
+        <li>
+          <img src="./assets/img/filme1.jpg" alt="O Poderoso Chefão">
+          <h3>O Poderoso Chefão</h3>
+
+        </li>
+
+        <li>
+          <img src="./assets/img/filme2.jpg" alt="Bastardos inglorios">
+          <h3>Bastardos inglorios</h3>
+
+
+        <li>
+          <img src="./assets/img/filme3.jpg" alt="Django">
+            <h3>Django</h3>         
+
+        </li>
+        <li>
+            <img src="./assets/img/filme4.jpg" alt="Pulp Fiction">
+            <h3>Pulp Fiction</h3>
+
+        </li>
+        <li>
+            <img src="./assets/img/filme5.jpg" alt="Os Oitos Odiados">
+            <h3>Os Oitos Odiados</h3>
+
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <div class="filmes">
+   <footer>
+    <p>7ª Art &copy; 2023</p>
+  </footer>
+  </div>
+</body>
+<script src="./assets/js/filme.js"></script>
+</html>
