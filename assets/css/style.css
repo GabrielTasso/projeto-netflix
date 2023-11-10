@@ -267,3 +267,20 @@ ul li {
   color: white;
   transform: rotateY(180deg);
 }
+
+.faq-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  margin-top: 10px;
+}
