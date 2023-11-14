@@ -12,7 +12,7 @@
 
 <h2>✔ Projeto Desenvolvido por</h2>
 <ul>
-  <li>Fernanda Novello</li>
+  <li>Fernanda de S. B. Santos</li>
   <li>Gabriel Tasso</li>
   <li>Luan Calasans</li>
 </ul>
