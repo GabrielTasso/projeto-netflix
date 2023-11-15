@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <title>7ª Art Filmes</title>
+  <link rel="shortcut icon" href="./assets/img/logowhite-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <title>7ª Art</title>
 </head>
+
 <body>
   <header>
     <div class="logo">
-    <a href="index.html"><img src="./assets/img/logowhite.png" alt="Logo da Netflix"></a>
+      <a href="index.html"><img src="./assets/img/logowhite.png" alt="Logo da Netflix"></a>
     </div>
   </header>
 
   <nav>
-    <a href="./index.html">Home</a>
-    <a href="./filmes.html">Filmes</a>
-    <a href="./series.html">Séries</a>
-    <a href="#">Documentários</a>
-    <a href="./criadores.html">Desenvolvedores</a>
+    <a href="./index.html" onclick="carregarPagina('./index.html'); return false;">Home</a>
+    <a href="./filmes.html" onclick="carregarPagina('./filmes.html'); return false;">Filmes</a>
+    <a href="./series.html" onclick="carregarPagina('./series.html'); return false;">Séries</a>
+    <a href="#" onclick="carregarPagina('#'); return false;">Documentários</a>
+    <a href="./criadores.html" onclick="carregarPagina('./criadores.html'); return false;">Desenvolvedores</a>
   </nav>
 
   <main>
     <section class="filmes">
       <h1>Filmes</h1>
       <input type="file" id="imagem">
-      <button  onclick="adicionarFilme()">Adicionar filme</button>
+      <button onclick="adicionarFilme()">Adicionar filme</button>
       <button class="remover" onclick="removerUltimoFilme()">Remover último filme</button>
-      <ul id="filmes"> 
+      <ul id="filmes">
 
         <li>
           <img src="./assets/img/filme1.jpg" alt="O Poderoso Chefão">
@@ -41,17 +44,17 @@
 
         <li>
           <img src="./assets/img/filme3.jpg" alt="Django">
-            <h3>Django</h3>         
+          <h3>Django</h3>
 
         </li>
         <li>
-            <img src="./assets/img/filme4.jpg" alt="Pulp Fiction">
-            <h3>Pulp Fiction</h3>
+          <img src="./assets/img/filme4.jpg" alt="Pulp Fiction">
+          <h3>Pulp Fiction</h3>
 
         </li>
         <li>
-            <img src="./assets/img/filme5.jpg" alt="Os Oitos Odiados">
-            <h3>Os Oitos Odiados</h3>
+          <img src="./assets/img/filme5.jpg" alt="Os Oitos Odiados">
+          <h3>Os Oitos Odiados</h3>
 
         </li>
 
@@ -60,10 +63,11 @@
   </main>
 
   <div class="filmes">
-   <footer>
-    <p>7ª Art &copy; 2023</p>
-  </footer>
+    <footer>
+      <p>7ª Art &copy; 2023</p>
+    </footer>
   </div>
+  <script src="./assets/js/filme.js"></script>
 </body>
-<script src="./assets/js/filme.js"></script>
+
 </html>

@@ -4,51 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedores do Projeto</title>
+  <link rel="shortcut icon" href="./assets/img/logowhite-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/devs.css">
+  <title>7ª Art</title>
 </head>
 
 <body>
-  <a class="logo" href="./index.html"><img src="./assets/img/logowhite.png" alt="Logotipo do site"></a>
-
-  <nav>
-    <a href="./index.html">Home</a>
-    <a href="./filmes.html">Filmes</a>
-    <a href="./series.html">Séries</a>
-    <a href="#">Documentários</a>
-    <a href="./criadores.html">Desenvolvedores</a>
-  </nav>
 
   <header>
+    <a class="logo" href="./index.html"><img src="./assets/img/logowhite.png" alt="Logotipo do site"></a>
+
+    <nav>
+      <a href="./index.html" onclick="carregarPagina('./index.html'); return false;">Home</a>
+      <a href="./filmes.html" onclick="carregarPagina('./filmes.html'); return false;">Filmes</a>
+      <a href="./series.html" onclick="carregarPagina('./series.html'); return false;">Séries</a>
+      <a href="#" onclick="carregarPagina('#'); return false;">Documentários</a>
+      <a href="./criadores.html" onclick="carregarPagina('./criadores.html'); return false;">Desenvolvedores</a>
+    </nav>
     <h1>Equipe de Desenvolvimento</h1>
   </header>
 
   <main>
-    <section class="developer">
+    <article class="developers">
       <img src="./assets/img/Fernanda.jpg" alt="Fernanda Novello">
       <h2>Fernanda</h2>
-    </section>
+    </article>
 
-    <section class="developer">
+    <article class="developers">
       <img src="./assets/img/Luan.jpg" alt="Luan Calasans">
       <h2>Luan</h2>
-    </section>
+    </article>
 
-    <section class="developer">
+    <article class="developers">
       <img src="./assets/img/Gabriel.jpg" alt="Gabriel Henrique">
       <h2>Gabriel</h2>
-    </section>
+    </article>
 
-
-    <section class="developer">
+    <article class="developers">
       <img src="./assets/img/ana.jpg" alt="Ana Caroline">
       <h2>Ana</h2>
-    </section>
+    </article>
   </main>
 
   <footer>
-    <p>7ª Art &copy; 2023</p>
+    <address>
+      <p>7ª Art &copy; 2023</p>
+    </address>
   </footer>
 </body>
 

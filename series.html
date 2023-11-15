@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/logowhite-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/ajax.js"></script>
   <title>Welcome to 7ª Art</title>
 </head>
 
@@ -18,11 +20,11 @@
   </header>
 
   <nav>
-    <a href="./index.html">Home</a>
-    <a href="./filmes.html">Filmes</a>
-    <a href="./series.html">Séries</a>
-    <a href="#">Documentários</a>
-    <a href="./criadores.html">Desenvolvedores</a>
+    <a href="./index.html" onclick="carregarPagina('./index.html'); return false;">Home</a>
+    <a href="./filmes.html" onclick="carregarPagina('./filmes.html'); return false;">Filmes</a>
+    <a href="./series.html" onclick="carregarPagina('./series.html'); return false;">Séries</a>
+    <a href="#" onclick="carregarPagina('#'); return false;">Documentários</a>
+    <a href="./criadores.html" onclick="carregarPagina('./criadores.html'); return false;">Desenvolvedores</a>
   </nav>
 
   <main>
@@ -53,7 +55,7 @@
           DUBLADO AGORA
           MESMO!</a>
         <li>
-          <h3>Lupin</h3>
+          <h2>Lupin</h2>
 
           <div class="flip-card-container">
             <div class="flip-card">

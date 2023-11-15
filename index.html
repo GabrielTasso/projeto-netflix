@@ -4,25 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/logowhite-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Welcome to 7ª Art</title>
+  <script src="./assets/js/ajax.js"></script>
+  <title>7ª Art</title>
 </head>
 
-<body>
+<body id="conteudo">
 
   <header>
     <div class="logo">
       <a href="./index.html"><img src="./assets/img/logowhite.png" alt="Logotipo do site"></a>
     </div>
-
   </header>
 
   <nav>
-    <a href="./index.html">Home</a>
-    <a href="./filmes.html">Filmes</a>
-    <a href="./series.html">Séries</a>
-    <a href="#">Documentários</a>
-    <a href="./criadores.html">Desenvolvedores</a>
+    <a href="./index.html" onclick="carregarPagina('./index.html'); return false;">Home</a>
+    <a href="./filmes.html" onclick="carregarPagina('./filmes.html'); return false;">Filmes</a>
+    <a href="./series.html" onclick="carregarPagina('./series.html'); return false;">Séries</a>
+    <a href="#" onclick="carregarPagina('#'); return false;">Documentários</a>
+    <a href="./criadores.html" onclick="carregarPagina('./criadores.html'); return false;">Desenvolvedores</a>
   </nav>
 
   <main>
@@ -30,9 +31,7 @@
       <h1>Últimos Lançamentos</h1>
       <ul>
         <li>
-
           <h2>Homem-Aranha: Através do Aranhaverso</h2>
-
           <div class="flip-card-container">
             <div class="flip-card">
               <div class="flip-card-inner">
@@ -45,17 +44,14 @@
               </div>
             </div>
           </div>
+          <p>Um adolescente de Brooklyn, Miles Morales, descobre que ele é um de muitos Homens-Aranha em um multiverso
+            conhecido como "Aranhaverso", e deve se unir a outros heróis aracnídeos para salvar sua realidade da
+            destruição.</p>
+          <a class="link" href="https://www.youtube.com/watch?v=LZBlXkDvhh4" target="_blank">ACESSE O TRAILER OFICIAL
+            DUBLADO AGORA MESMO!</a>
         </li>
-        <p>Um adolescente de Brooklyn, Miles Morales, descobre que <br> ele é um de muitos Homens-Aranha em um
-          multiverso conhecido <br> como "Aranhaverso", e deve se unir a outros heróis aracnídeos para salvar <br> sua
-          realidade da destruição.</p>
-        <a class="link" href="https://www.youtube.com/watch?v=LZBlXkDvhh4" target="_blank">ACESSE O TRAILER OFICIAL
-          DUBLADO AGORA
-          MESMO!</a>
         <li>
-          <h3>Percy Jackson e os Olimpianos</h3>
-          <!-- <div class="percy"> <img src="percy.png" alt="Série"></div> -->
-
+          <h2>Percy Jackson e os Olimpianos</h2>
           <div class="flip-card-container">
             <div class="flip-card">
               <div class="flip-card-inner">
@@ -68,47 +64,49 @@
               </div>
             </div>
           </div>
-
-          <p>Percy Jackson é um adolescente aparentemente normal <br> que descobre ser um semideus, filho de Poseidon.
-            Ele é enviado <br> para o Acampamento Meio-Sangue, um refúgio para semideuses, <br> onde deve aprender a
-            aprimorar suas habilidades e enfrentar uma <br> série de missões para prevenir o caos no Olimpo.</p>
+          <p>Percy Jackson é um adolescente aparentemente normal que descobre ser um semideus, filho de Poseidon. Ele é
+            enviado para o Acampamento Meio-Sangue, um refúgio para semideuses, onde deve aprender a aprimorar suas
+            habilidades e enfrentar uma série de missões para prevenir o caos no Olimpo.</p>
           <a class="link" href="https://www.youtube.com/watch?v=uvk45iybIl4" target="_blank">ACESSE O TRAILER OFICIAL
-            DUBLADO
-            AGORA MESMO!</a>
+            DUBLADO AGORA MESMO!</a>
+        </li>
       </ul>
     </section>
 
-    <div class="faq-container">
-      <div class="faq-item" onclick="toggleAnswer('answer1')">
+    <section>
+      <div class="faq-container">
+        <div class="faq-item" onclick="toggleAnswer('answer1')">
           <h3>O que é a 7ª Art</h3>
           <div class="answer" id="answer1">
-              <p>7ª Art é um serviço de streaming que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de dispositivos conectados à Internet.</p>
+            <p>7ª Art é um serviço de streaming que oferece uma ampla variedade de séries, filmes e documentários
+              premiados em milhares de dispositivos conectados à Internet.</p>
           </div>
-      </div>
+        </div>
 
-      <div class="faq-item" onclick="toggleAnswer('answer2')">
+        <div class="faq-item" onclick="toggleAnswer('answer2')">
           <h3>Onde posso assistir?</h3>
           <div class="answer" id="answer2">
-              <p>
-                Assista onde quiser, quando quiser. comece a assistir no seu computador ou em qualquer dispositivo conectado à Internet, como smart TVs, smartphones, tablets, dispositivos de streaming e videogames.</p>
+            <p>
+              Assista onde quiser, quando quiser. comece a assistir no seu computador ou em qualquer dispositivo
+              conectado à Internet, como smart TVs, smartphones, tablets, dispositivos de streaming e videogames.</p>
           </div>
-      </div>
+        </div>
 
-      <div class="faq-item" onclick="toggleAnswer('answer3')">
+        <div class="faq-item" onclick="toggleAnswer('answer3')">
           <h3>Os filmes são atualizados regularmente?</h3>
           <div class="answer" id="answer3">
-              <p>Sim, atualizamos regularmente o catálogo de filmes.</p>
+            <p>Sim, atualizamos regularmente o catálogo de filmes.</p>
           </div>
-      </div>
-
-      <div class="faq-item" onclick="toggleAnswer('answer4')">
-        <h3>Como faço para sugerir um filme para ser adicionado ao catálogo?</h3>
-        <div class="answer" id="answer4">
-            <p>Aceitamos sugestões! Envie-nos o título do filme que você gostaria de ver adicionado.</p>
         </div>
-    </div>
-  </div>
 
+        <div class="faq-item" onclick="toggleAnswer('answer4')">
+          <h3>Como faço para sugerir um filme para ser adicionado ao catálogo?</h3>
+          <div class="answer" id="answer4">
+            <p>Aceitamos sugestões! Envie-nos o título do filme que você gostaria de ver adicionado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -119,4 +117,4 @@
 
 </body>
 
-</html>
+</html
