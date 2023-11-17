@@ -1,73 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" href="./assets/img/logowhite-favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>7ª Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="filmesscript.js" defer></script>
+  <title>Welcome to 7ª Art</title>
+
+  <style>
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 100px;
+      max-width: 100px;
+    }
+
+
+    .Elvis {
+      width: 25%;
+    }
+    
+    .coda {
+      width: 25%;
+    }
+
+    .filme-imagem img {
+  width: 25%;
+}
+
+    body {
+      font-family: sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 2.5px;
+    } 
+    
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+    }
+    
+    nav a:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    section {
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+    
+    footer {
+      background-color: #daa520;
+      color: #000000;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #daa520;
+    }
+
+  </style>
+
 </head>
 
 <body>
+
   <header>
     <div class="logo">
-      <a href="index.html"><img src="./assets/img/logowhite.png" alt="Logo da Netflix"></a>
+      <a href="index.html"><img src="imgs/logowhite.png" alt="Logotipo do site"></a>
     </div>
+
   </header>
 
   <nav>
-    <a href="./index.html" onclick="carregarPagina('./index.html'); return false;">Home</a>
-    <a href="./filmes.html" onclick="carregarPagina('./filmes.html'); return false;">Filmes</a>
-    <a href="./series.html" onclick="carregarPagina('./series.html'); return false;">Séries</a>
-    <a href="#" onclick="carregarPagina('#'); return false;">Documentários</a>
-    <a href="./criadores.html" onclick="carregarPagina('./criadores.html'); return false;">Desenvolvedores</a>
+    <a href="index.html">Home</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="documentarios.html">Documentários</a>
+    <a href="desenvolvedor.html">Desenvolvedores</a>
   </nav>
 
   <main>
     <section class="filmes">
-      <h1>Filmes</h1>
-      <input type="file" id="imagem">
-      <button onclick="adicionarFilme()">Adicionar filme</button>
-      <button class="remover" onclick="removerUltimoFilme()">Remover último filme</button>
-      <ul id="filmes">
+      <h1>FILMES</h1>
+
+      <button id="adicionarFilme">Adicionar Filme</button>
+
+      <ul>
+        <li>
+            <h2>Elvis</h2>
+            <div class="Elvis">
+                <a href="filmes.html"><img src="imgs/Elvis.jpg" alt="Foto/Banner promocional do Filme do rei do rock, Elvis"></a>
+              </div>
+            </li>
+
+            <p>Nesta minuciosa cinebiografia, a história de Elvis 
+                <br>é vista sob o prisma de sua complicada relação <br>
+                com o enigmático empresário, o Coronel Tom Parker.</p>
+<p><a href="https://www.youtube.com/watch?v=XpU9J2oL0GE" target="_blank">ACESSE O TRAILER OFICIAL DUBLADO AGORA MESMO!</a></p>
+<button class="editar-filme">Editar</button>
+    <button class="remover-filme">Remover</button>
+    <button class="ler-filme">Ler</button>
+
 
         <li>
-          <img src="./assets/img/filme1.jpg" alt="O Poderoso Chefão">
-          <h3>O Poderoso Chefão</h3>
+       
+            <h2>Coda - No Ritmo do Coração</h2>
 
-        </li>
+            <div class="coda">
+                <a href="filmes.html"><img src="imgs/coda.jpg" alt="Foto/Banner promocional do Filme Coda - No Ritmo do Coração"></a>
+              </div>
 
-        <li>
-          <img src="./assets/img/filme2.jpg" alt="Bastardos inglorios">
-          <h3>Bastardos inglorios</h3>
+<p>Neste drama vencedor de três Oscars®, incluindo 
+    <br>Melhor Filme, Ruby (Emilia Jones) é a única 
+    <br>pessoa que pode ouvir em uma família de surdos <br>
+    cujos negócios vão mal, e que terá que decidir entre 
+    <br>o sonho de estudar música e cuidar dos pais.</p>
+    <a href="https://www.youtube.com/watch?v=USGw538dzuU" target="_blank">ACESSE O TRAILER OFICIAL DUBLADO AGORA MESMO!</a></p>
 
+    <button class="editar-filme">Editar</button>
+    <button class="remover-filme">Remover</button>
+    <button class="ler-filme">Ler</button>
 
-        <li>
-          <img src="./assets/img/filme3.jpg" alt="Django">
-          <h3>Django</h3>
-
-        </li>
-        <li>
-          <img src="./assets/img/filme4.jpg" alt="Pulp Fiction">
-          <h3>Pulp Fiction</h3>
-
-        </li>
-        <li>
-          <img src="./assets/img/filme5.jpg" alt="Os Oitos Odiados">
-          <h3>Os Oitos Odiados</h3>
-
-        </li>
-
+</li>
       </ul>
+
+    
     </section>
   </main>
 
-  <div class="filmes">
-    <footer>
-      <p>7ª Art &copy; 2023</p>
-    </footer>
-  </div>
-  <script src="./assets/js/filme.js"></script>
-</body>
+  <footer>
+    <p>7ª Art Copyright © 2023</p>
+  </footer>
 
+</body>
 </html>
