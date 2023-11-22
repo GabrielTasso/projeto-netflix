@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://github.com/GabrielTasso/projeto-netflix/assets/69552520/13875b2d-318c-4d81-8e4e-72ccc32be8ca" width="679px">
-  <h1>Projeto Netflix</h1>
+  <h1>Projeto 7th Art</h1>
 </div>
 
 <h2>🚀 Tecnologias</h2>
