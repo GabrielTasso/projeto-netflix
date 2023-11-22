@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="seriesscript.js" defer></script>
   <title>Welcome to 7ª Art</title>
 
   <style>
@@ -133,6 +134,45 @@
     transform: rotateY(180deg);
   }
 
+  /* Form */
+
+  
+  form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .forms {
+      color: #000000;
+    }
+
   </style>
 
 </head>
@@ -201,6 +241,30 @@
     
     </section>
   </main>
+  <div class="forms">
+
+  <form action="#" method="post">
+    <label for="nome">Nome*:</label>
+    <input type="text" id="nome" name="nome" required>
+  
+    <br>
+  
+    <label for="sugestao">Sugestão:</label>
+    <input type="text" id="sugestao" name="sugestao" required>
+  
+    <br>
+  
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+  
+    <br>
+  
+    <input type="submit" value="Enviar">
+  </form>
+
+  </div>
+
+  <p id="mensagemResposta"></p>
 
   <footer>
     <p>7ª Art Copyright © 2023</p>
