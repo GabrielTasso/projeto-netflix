@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="desenvolvedorscript.js" defer></script>
-    <title>Desenvolvedores 7th Art</title>
 
-<style>
-.logo {
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="desenvolvedorscript.js" defer></script>
+  <title>Desenvolvedores 7th Art</title>
+
+  <style>
+    .logo {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,28 +38,30 @@
       flex-direction: column;
       min-height: 100vh;
     }
+
     header {
       background-color: #000000;
       color: #ffffff;
       padding: 2.5px;
-    } 
-    
+    }
+
     h1 {
       font-size: 2rem;
       text-align: center;
     }
+
     img {
       width: 100%;
       max-height: calc(100vh - 200px);
       object-fit: cover;
     }
-    
+
     nav {
       display: flex;
       justify-content: space-around;
       padding: 20px;
     }
-    
+
     nav a {
       color: #ffffff;
       text-decoration: none;
@@ -67,30 +70,30 @@
       border: 1px solid #ffffff;
       border-radius: 5px;
     }
-    
+
     nav a:hover {
       background-color: #000000;
       color: #ffffff;
     }
-    
+
     main {
       padding: 20px;
       flex: 1 0 auto;
     }
-    
+
     section {
       margin-bottom: 20px;
     }
-    
+
     h2 {
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
-    
+
     p {
       font-size: 1rem;
     }
-    
+
     footer {
       background-color: #daa520;
       color: #000000;
@@ -98,98 +101,170 @@
       text-align: center;
       flex-shrink: 0;
     }
+
     nav {
       background-color: #daa520;
     }
 
- /*---DESENVOLVEDOR--*/ 
-  .desenvolvedor p{
-    color: #f0eaea;
-  }
+    /*---DESENVOLVEDOR--*/
+    .desenvolvedor p {
+      color: #f0eaea;
+    }
 
-  .desenvolvedor h1 {
-    color: #f0eaea;
-  }
-  
-  .desenvolvedor h2{
-    text-align: center;
-    color: #daa520;
-  }
+    .desenvolvedor h1 {
+      color: #f0eaea;
+    }
 
-  .desenvolvedor h3{
-    
-    color: #daa520;
-  }
+    .desenvolvedor h2 {
+      text-align: center;
+      color: #daa520;
+    }
+
+    .desenvolvedor h3 {
+
+      color: #daa520;
+    }
 
 
-  .desenvolvedor li {
-    display: inline-block;
-    margin: 40px;
-  }
+    .desenvolvedor li {
+      display: inline-block;
+      margin: 40px;
+    }
 
-  .desenvolvedor {
-    text-align: center;
-  }
+    .desenvolvedor {
+      text-align: center;
+    }
 
-</style>
+    li{
+      list-style: none;
+    }
+
+    /* Menu hambúrguer */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #ffffff;
+      position: absolute;
+      transform: translateY(-50%);
+      right: 50%;
+      /* Centraliza horizontalmente */
+      transform: translateX(50%);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      max-height: 100px;
+      max-width: 100px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #daa520;
+        z-index: 1;
+      }
+
+      nav a {
+        margin-top: 10px;
+        display: block;
+      }
+
+      .menu-icon {
+        display: block;
+        color: #daa520;
+        ;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="logo">
       <a href="index.html"><img src="imgs/logowhite.png" alt="Logotipo do site"></a>
     </div>
-
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </header>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="filmes.html">Filmes</a>
-      <a href="series.html">Séries</a>
-      <a href="documentarios.html">Documentários</a>
-      <a href="desenvolvedor.html">Desenvolvedores</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="documentarios.html">Documentários</a>
+    <a href="desenvolvedor.html">Desenvolvedores</a>
+  </nav>
 
-    <main>
-      <section class="desenvolvedor">
-        <h2>Desenvolvedores</h2>
-        <ul id="desenvolvedor">
+  <main>
+    <section class="desenvolvedor">
+      <h2>Desenvolvedores</h2>
+      <ul id="desenvolvedor">
         <ul>
-        <li>
-          <div class="Gabriel">
-          <img src="imgs/Gabriel.jpg" alt="Gabriel desenvolvedor"></div>
-          <h3>Gabriel Henrique Tasso Martins</h3>
-          <div hidden> 
-          <h1>22 Anos</h1>
-          <p>Responsável pela parte de Documentários (eventos e manipulação do DOM) e Desenvolvedores (traverse).</p>
-          </div>
-        </li>
-<li>
-  <div class="Fernanda">
-<img src="imgs/Fernanda.jpg" alt="Fernanda desenvolvedora"></div>
-<h3>Fernanda de S. B. Santos</h3>
-<div hidden> 
-<h1>26 Anos</h1>
-<p>Responsável pela parte do Menu Principal, Filmes (habilidades completas de manipulação do DOM) e Séries (css/folhas de estilo).</p>
-</div>
-</li>
-<li>
-  <div class="Luan">
-  <img src="imgs/Luan.jpg" alt="Luan desenvolvedor"></div>
-    <h3>Luan Calasans</h3>          
+          <li>
+            <div class="Gabriel">
+              <img src="imgs/Gabriel.jpg" alt="Gabriel desenvolvedor">
+            </div>
+            <h3>Gabriel Henrique Tasso Martins</h3>
+            <div hidden>
+              <h1>22 Anos</h1>
+              <p>Responsável pela parte de Documentários (eventos e manipulação do DOM) e Desenvolvedores (traverse).
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="Fernanda">
+              <img src="imgs/Fernanda.jpg" alt="Fernanda desenvolvedora">
+            </div>
+            <h3>Fernanda de S. B. Santos</h3>
+            <div hidden>
+              <h1>26 Anos</h1>
+              <p>Responsável pela parte do Menu Principal, Filmes (habilidades completas de manipulação do DOM) e Séries
+                (css/folhas de estilo).</p>
+            </div>
+          </li>
+          <li>
+            <div class="Luan">
+              <img src="imgs/Luan.jpg" alt="Luan desenvolvedor">
+            </div>
+            <h3>Luan Calasans</h3>
 
-  <div hidden>
-    <h1>20 Anos</h1>
-    <p>Responsável pela parte do Séries/AJAX.</p>
-  </div>
-  
-</li>
+            <div hidden>
+              <h1>20 Anos</h1>
+              <p>Responsável pela parte do Séries/AJAX.</p>
+            </div>
 
-</ul>
+          </li>
 
-</section>
-</main>
-<footer>
-<p>7ª Art Copyright © 2023</p>
-</footer>
+        </ul>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>7ª Art Copyright © 2023</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
 </body>
+
 </html>

@@ -173,6 +173,62 @@
       color: #000000;
     }
 
+    li{
+      list-style: none;
+    }
+
+    /* Menu hambúrguer */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #ffffff;
+      position: absolute;
+      transform: translateY(-50%);
+      right: 50%;
+      /* Centraliza horizontalmente */
+      transform: translateX(50%);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      max-height: 100px;
+      max-width: 100px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #daa520;
+        z-index: 1;
+      }
+
+      nav a {
+        margin-top: 10px;
+        display: block;
+      }
+
+      .menu-icon {
+        display: block;
+        color: #daa520;
+        ;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
   </style>
 
 </head>
@@ -183,7 +239,7 @@
     <div class="logo">
       <a href="index.html"><img src="imgs/logowhite.png" alt="Logotipo do site"></a>
     </div>
-
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </header>
 
   <nav>
@@ -269,6 +325,13 @@
   <footer>
     <p>7ª Art Copyright © 2023</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
