@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./js/filmesscript.js" defer></script>
-  <title>Welcome to 7ª Art</title>
+  <title>Filmes 7ª Art</title>
 
   <style>
     .logo {
@@ -98,7 +98,7 @@
       background-color: #daa520;
     }
 
-    li{
+    li {
       list-style: none;
     }
 
@@ -163,7 +163,7 @@
     <div class="logo">
       <a href="index.html"><img src="imgs/logowhite.png" alt="Logotipo do site"></a>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰ Menu</div>
   </header>
 
   <nav>
@@ -238,6 +238,28 @@
       var nav = document.querySelector('nav');
       nav.classList.toggle('active');
     }
+
+    function carregarConteudo(url) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.querySelector('body').innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open('GET', url, true);
+      xhr.send();
+    }
+
+    // Adiciona manipuladores de eventos para os links do menu
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+        var href = this.getAttribute('href');
+        carregarConteudo(href);
+      });
+    });
+
+    carregarConteudo('filmes.html');
   </script>
 
 </body>

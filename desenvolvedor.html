@@ -135,7 +135,7 @@
       text-align: center;
     }
 
-    li{
+    li {
       list-style: none;
     }
 
@@ -198,7 +198,7 @@
     <div class="logo">
       <a href="index.html"><img src="imgs/logowhite.png" alt="Logotipo do site"></a>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰ Menu</div>
   </header>
 
   <nav>
@@ -213,44 +213,39 @@
     <section class="desenvolvedor">
       <h2>Desenvolvedores</h2>
       <ul id="desenvolvedor">
-        <ul>
-          <li>
-            <div class="Gabriel">
-              <img src="imgs/Gabriel.jpg" alt="Gabriel desenvolvedor">
-            </div>
-            <h3>Gabriel Henrique Tasso Martins</h3>
-            <div hidden>
-              <h1>22 Anos</h1>
-              <p>Responsável pela parte de Documentários (eventos e manipulação do DOM) e Desenvolvedores (traverse).
-              </p>
-            </div>
-          </li>
-          <li>
-            <div class="Fernanda">
-              <img src="imgs/Fernanda.jpg" alt="Fernanda desenvolvedora">
-            </div>
-            <h3>Fernanda de S. B. Santos</h3>
-            <div hidden>
-              <h1>26 Anos</h1>
-              <p>Responsável pela parte do Menu Principal, Filmes (habilidades completas de manipulação do DOM) e Séries
-                (css/folhas de estilo).</p>
-            </div>
-          </li>
-          <li>
-            <div class="Luan">
-              <img src="imgs/Luan.jpg" alt="Luan desenvolvedor">
-            </div>
-            <h3>Luan Calasans</h3>
-
-            <div hidden>
-              <h1>20 Anos</h1>
-              <p>Responsável pela parte do Séries/AJAX.</p>
-            </div>
-
-          </li>
-
-        </ul>
-
+        <li>
+          <div class="Gabriel">
+            <img src="imgs/Gabriel.jpg" alt="Gabriel desenvolvedor">
+          </div>
+          <h3>Gabriel Henrique Tasso Martins</h3>
+          <div hidden>
+            <h1>22 Anos</h1>
+            <p>Responsável pela parte de Documentários (eventos e manipulação do DOM) e Desenvolvedores (traverse).
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="Fernanda">
+            <img src="imgs/Fernanda.jpg" alt="Fernanda desenvolvedora">
+          </div>
+          <h3>Fernanda de S. B. Santos</h3>
+          <div hidden>
+            <h1>26 Anos</h1>
+            <p>Responsável pela parte do Menu Principal, Filmes (habilidades completas de manipulação do DOM) e Séries
+              (css/folhas de estilo).</p>
+          </div>
+        </li>
+        <li>
+          <div class="Luan">
+            <img src="imgs/Luan.jpg" alt="Luan desenvolvedor">
+          </div>
+          <h3>Luan Calasans</h3>
+          <div hidden>
+            <h1>20 Anos</h1>
+            <p>Responsável pela parte do Séries/AJAX.</p>
+          </div>
+        </li>
+      </ul>
     </section>
   </main>
 
@@ -263,8 +258,29 @@
       var nav = document.querySelector('nav');
       nav.classList.toggle('active');
     }
-  </script>
 
+    function carregarConteudo(url) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.querySelector('body').innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open('GET', url, true);
+      xhr.send();
+    }
+
+    // Adiciona manipuladores de eventos para os links do menu
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+        var href = this.getAttribute('href');
+        carregarConteudo(href);
+      });
+    });
+
+    carregarConteudo('desenvolvedor.html');
+  </script>
 </body>
 
 </html>
